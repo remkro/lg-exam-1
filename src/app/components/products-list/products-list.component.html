@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-title>New Year Collection</mat-card-title>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of data$ | async">{{item.title}} {{item.price}} {{item.rating}} <a routerLink="products/{{item.id}}"><img [src]="item.image" style="width:60px;"></a>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
