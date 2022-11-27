@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-title></mat-card-title>
+  <mat-card-content>
+    <form [formGroup]="productForm" (ngSubmit)="onProductFormSubmitted(productForm)">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Title</mat-label>
+          <input matInput type="text" placeholder="Title" formControlName="title" required>
+          <mat-error *ngIf="productForm.get('title')!.invalid">title is invalid</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Price</mat-label>
+          <input matInput type="text" placeholder="Price" formControlName="price" required>
+          <mat-error *ngIf="productForm.get('price')!.invalid">price is invalid</mat-error>
+        </mat-form-field>
+      </div>
+      <div>
+        <button type="submit" mat-raised-button color="primary" href="/categories">Submit</button>
+      </div>
+    </form>
+  </mat-card-content>
+  </mat-card>

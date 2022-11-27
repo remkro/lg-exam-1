@@ -1,0 +1,12 @@
+<mat-card>
+  <mat-card-title>Categories</mat-card-title>
+  <mat-card-content>
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip *ngFor="let item of data$ | async">
+        {{item}}
+      </mat-chip>
+    </mat-chip-list>
+    <button mat-raised-button color="primary" routerLink="/add-product" style="margin-top:30px;">Add product</button>
+  </mat-card-content>
+</mat-card>
+
